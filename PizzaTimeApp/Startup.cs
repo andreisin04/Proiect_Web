@@ -111,6 +111,8 @@ namespace PizzaTimeApp
             //services.AddSingleton<IProductsRepository, ProductsRepository>(); //o singura instanta pt toata aplicatia
         
             services.AddTransient<IProductsManager, ProductsManager>();
+            services.AddTransient<IDetailsRepository, DetailsRepository>();
+            services.AddTransient<IDetailsManager, DetailsManager>();
             services.AddTransient<IAuthenticationManager, AuthenticationManager>();
             services.AddTransient<ITokenManager, TokenManager>();
         }
